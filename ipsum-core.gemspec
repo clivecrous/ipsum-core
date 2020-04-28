@@ -12,6 +12,8 @@ Gem::Specification.new do |s|
   s.summary     = %q{This is the core engine of the ipsum gem, install that instead}
   s.description = %q{This is the core engine of the ipsum gem, install that instead}
 
+  s.required_ruby_version = '>= 2.4.0'
+
   s.add_development_dependency "bundler", ">= 1.0.0"
   s.add_development_dependency "rake", ">= 0.8.7"
 
