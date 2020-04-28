@@ -68,7 +68,7 @@ class Ipsum # :nodoc: all
 
 end
 
-class Fixnum
+class Integer
 
   # Generate filler text for this amount of sentences. For example:
   #   12.sentences
