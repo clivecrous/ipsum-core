@@ -33,14 +33,9 @@ class Ipsum # :nodoc: all
   end
 
   def self.letter_following( sequence, position, language = self.default_language )
-    dict = dictionary( language )
     sequence_statistics = dictionary( language )[ sequence ][ position ]
     if sequence_statistics
-      letters = '' 
-      sequence_statistics.each_pair do |character,amount|
-        letters << character*amount
-      end
-      letters[rand(letters.size)]
+      sequence_statistics.max_by { |_, weight| rand ** (1.0 / weight) }.first
     end
   end
 

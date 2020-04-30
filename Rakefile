@@ -22,3 +22,11 @@ task :dictionary do
   dictionary[ '' ][0].delete( "\n" )
   p dictionary
 end
+
+begin
+  require 'rspec/core/rake_task'
+  desc "run rspec tests"
+  RSpec::Core::RakeTask.new(:spec)
+  task :default => :spec
+rescue LoadError
+end
